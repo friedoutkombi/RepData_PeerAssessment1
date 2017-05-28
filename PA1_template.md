@@ -44,7 +44,7 @@ Next we will plot the daily step count on a histogram.
 barplot(daytotal$steps,xlab="Date",ylab="Steps for day",main="Daily steps by date")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](figure-markdown/unnamed-chunk-2-1.png)
 
 Next let us compare the mean vs the median of the total number of steps taken per day.
 
@@ -70,7 +70,7 @@ interval.total<-aggregate(steps ~ interval, activity, mean)
 ggplot(interval.total,aes(interval,steps))+geom_line(color="blue",size=1)+labs(title = "Time Series Plot of the 5-minute Intervals", x = "5-minute intervals", y = "Average Number of Steps Taken")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](figure-markdown/unnamed-chunk-4-1.png)
 
 The 5-minute interval that, on average, contains the maximum number of steps
 ----------------------------------------------------------------------------
@@ -133,7 +133,7 @@ day.total2<-aggregate(steps ~ date, activity2, sum)
 barplot(daytotal$steps,xlab="date",ylab="steps for day",main="Daily steps by date (NA's imputted)")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](figure-markdown/unnamed-chunk-9-1.png)
 
 Next let us compare the mean vs the median of the total number of steps taken per day.
 
@@ -174,4 +174,4 @@ xyplot(steps ~ interval | week, data = averageacross, type = "l", lwd = 2,
        main = "Avg Number of Steps Taken at 5 Minute Intervals (weekdays vs weekend)")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![](figure-markdown/unnamed-chunk-12-1.png)
